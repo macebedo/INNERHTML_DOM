@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      DOM Method
+    </title>
+    <script>
+      ctr=1;
+      function domFunction() {
+        var  inputMsg=document.getElementById("text").value;
+        var para = document.createElement("p");
+        var node = document.createTextNode(ctr +". "+inputMsg);
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        element.appendChild(para);
+        ctr++;
+        document.getElementById("text").value="";
+        document.getElementById("text").focus();
+      }
+      
+      function cleartext() {
+        document.getElementById("div1").innerHTML="";
+        document.getElementById("text").value="";
+        document.getElementById("text").focus();
+      }
+  </script>
+  </head>
+  <body>
+    <h3>
+      DOM Method
+  </h3>
+  <a href="Mark_Acebedo-L8.html">
+    BACK
+  </a>&nbsp;&nbsp;<a href=innerHTML.html>innerHTML Method</a>
+  <p>
+    Please enter text here:
+  </p>
+  <input name="text" id="text" type="text" size="30" maxlength="30" autofocus />
+  <input name="button1" type="button" value=" Enter " onclick="domFunction()"/>
+  <input name="button2" type="button" value=" Clear " onclick="cleartext(ctr=1)"/>
+  <div id="div1">
+    <p id="p1">
+      </p>
+      
+  </div>
+  </body>
+</html>
